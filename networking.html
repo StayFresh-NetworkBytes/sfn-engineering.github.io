@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking - Infrastructure Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="prompt">$</span>
+                    <a href="index.html" class="logo-text" style="color: inherit; text-decoration: none;">infra.docs</a>
+                    <span class="cursor">_</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="index.html#home" class="nav-link">home</a>
+                    <a href="index.html#docs" class="nav-link active">docs</a>
+                    <a href="index.html#guides" class="nav-link">guides</a>
+                    <a href="#about" class="nav-link">about</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Networking</div>
+                <nav class="sidebar-nav">
+                    <a href="#overview" class="sidebar-link active">Overview</a>
+                    <a href="#tcp-ip" class="sidebar-link">TCP/IP Fundamentals</a>
+                    <a href="#routing" class="sidebar-link">Routing Protocols</a>
+                    <a href="#vlans" class="sidebar-link">VLANs & Subnetting</a>
+                    <a href="#load-balancing" class="sidebar-link">Load Balancing</a>
+                    <a href="#vpn" class="sidebar-link">VPN Technologies</a>
+                    <a href="#network-security" class="sidebar-link">Network Security</a>
+                    <a href="#troubleshooting" class="sidebar-link">Troubleshooting</a>
+                </nav>
+            </div>
+            
+            <div class="sidebar-section">
+                <div class="sidebar-title">Other Topics</div>
+                <nav class="sidebar-nav">
+                    <a href="servers.html" class="sidebar-link">Servers</a>
+                    <a href="applications.html" class="sidebar-link">Applications</a>
+                    <a href="services.html" class="sidebar-link">Services</a>
+                    <a href="security.html" class="sidebar-link">Security</a>
+                    <a href="automation.html" class="sidebar-link">Automation</a>
+                </nav>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-content">
+            <article class="doc-article">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="separator">/</span>
+                    <a href="index.html#docs">Documentation</a>
+                    <span class="separator">/</span>
+                    <span class="current">Networking</span>
+                </nav>
+
+                <!-- Page Header -->
+                <header class="doc-header" id="overview">
+                    <div class="doc-tag">NETWORKING</div>
+                    <h1 class="doc-title">Networking Fundamentals</h1>
+                    <p class="doc-intro">
+                        Master the essential concepts of computer networking, from OSI layers to 
+                        advanced routing protocols and network architecture patterns.
+                    </p>
+                    <div class="doc-meta">
+                        <span class="meta-item">
+                            <span class="meta-label">Last Updated:</span>
+                            <span class="meta-value">January 2026</span>
+                        </span>
+                        <span class="meta-item">
+                            <span class="meta-label">Reading Time:</span>
+                            <span class="meta-value">45 min</span>
+                        </span>
+                        <span class="meta-item">
+                            <span class="meta-label">Difficulty:</span>
+                            <span class="meta-value">Intermediate</span>
+                        </span>
+                    </div>
+                </header>
+
+                <!-- Content Sections -->
+                <section class="doc-section" id="tcp-ip">
+                    <h2>TCP/IP Fundamentals</h2>
+                    
+                    <p>
+                        The TCP/IP protocol suite is the foundation of modern internet communication. 
+                        Understanding these protocols is essential for anyone working with networked systems.
+                    </p>
+
+                    <h3>The OSI Model vs TCP/IP Model</h3>
+                    
+                    <div class="info-box">
+                        <div class="info-box-title">
+                            <span class="info-icon">ℹ️</span>
+                            Quick Reference
+                        </div>
+                        <div class="info-box-content">
+                            While the OSI model has 7 layers, TCP/IP consolidates these into 4 practical layers:
+                            Application, Transport, Internet, and Network Access.
+                        </div>
+                    </div>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">TCP/IP Stack</span>
+                            <button class="code-copy">Copy</button>
+                        </div>
+                        <pre><code>┌─────────────────────────────┐
+│   Application Layer         │  HTTP, FTP, DNS, SSH
+├─────────────────────────────┤
+│   Transport Layer           │  TCP, UDP
+├─────────────────────────────┤
+│   Internet Layer            │  IP, ICMP, ARP
+├─────────────────────────────┤
+│   Network Access Layer      │  Ethernet, Wi-Fi
+└─────────────────────────────┘</code></pre>
+                    </div>
+
+                    <h3>IP Addressing</h3>
+                    
+                    <p>
+                        IP addresses are unique identifiers for devices on a network. IPv4 uses 32-bit addresses,
+                        while IPv6 uses 128-bit addresses to accommodate the growing number of networked devices.
+                    </p>
+
+                    <div class="table-wrapper">
+                        <table class="doc-table">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Range</th>
+                                    <th>Default Subnet Mask</th>
+                                    <th>Use Case</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>A</code></td>
+                                    <td>1.0.0.0 - 126.255.255.255</td>
+                                    <td>255.0.0.0 (/8)</td>
+                                    <td>Very large networks</td>
+                                </tr>
+                                <tr>
+                                    <td><code>B</code></td>
+                                    <td>128.0.0.0 - 191.255.255.255</td>
+                                    <td>255.255.0.0 (/16)</td>
+                                    <td>Medium to large networks</td>
+                                </tr>
+                                <tr>
+                                    <td><code>C</code></td>
+                                    <td>192.0.0.0 - 223.255.255.255</td>
+                                    <td>255.255.255.0 (/24)</td>
+                                    <td>Small networks</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <span class="warning-icon">⚠️</span>
+                            Important Note
+                        </div>
+                        <div class="warning-content">
+                            Private IP ranges (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) should never be routed
+                            on the public internet. Use NAT for internet connectivity from private networks.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="doc-section" id="routing">
+                    <h2>Routing Protocols</h2>
+                    
+                    <p>
+                        Routing protocols enable routers to dynamically learn and share network topology information,
+                        allowing them to make intelligent forwarding decisions.
+                    </p>
+
+                    <h3>Static vs Dynamic Routing</h3>
+                    
+                    <div class="comparison-grid">
+                        <div class="comparison-card">
+                            <h4>Static Routing</h4>
+                            <ul>
+                                <li>Manually configured routes</li>
+                                <li>No overhead from routing protocols</li>
+                                <li>Predictable paths</li>
+                                <li>Best for small, stable networks</li>
+                                <li>Requires manual updates for changes</li>
+                            </ul>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-lang">bash</span>
+                                </div>
+                                <pre><code># Add static route in Linux
+ip route add 192.168.2.0/24 via 192.168.1.1
+
+# Make route persistent
+echo "192.168.2.0/24 via 192.168.1.1" >> /etc/network/routes</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="comparison-card">
+                            <h4>Dynamic Routing</h4>
+                            <ul>
+                                <li>Automatically discovers routes</li>
+                                <li>Adapts to network changes</li>
+                                <li>Scales to large networks</li>
+                                <li>Protocols: OSPF, BGP, EIGRP, RIP</li>
+                                <li>Increased complexity and overhead</li>
+                            </ul>
+                            <div class="code-block">
+                                <div class="code-header">
+                                    <span class="code-lang">config</span>
+                                </div>
+                                <pre><code># OSPF configuration example
+router ospf 1
+  network 192.168.1.0 0.0.0.255 area 0
+  network 10.0.0.0 0.0.0.255 area 1</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="doc-section" id="vlans">
+                    <h2>VLANs & Subnetting</h2>
+                    
+                    <p>
+                        Virtual LANs (VLANs) allow you to segment a physical network into multiple logical networks,
+                        improving security, performance, and manageability.
+                    </p>
+
+                    <h3>VLAN Configuration</h3>
+                    
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-lang">Switch Configuration</span>
+                            <button class="code-copy">Copy</button>
+                        </div>
+                        <pre><code># Create VLANs
+vlan 10
+  name ENGINEERING
+vlan 20
+  name SALES
+vlan 30
+  name GUEST
+
+# Assign ports to VLANs
+interface GigabitEthernet0/1
+  switchport mode access
+  switchport access vlan 10
+
+# Configure trunk port
+interface GigabitEthernet0/24
+  switchport mode trunk
+  switchport trunk allowed vlan 10,20,30</code></pre>
+                    </div>
+
+                    <h3>Subnetting Practice</h3>
+                    
+                    <div class="tip-box">
+                        <div class="tip-title">
+                            <span class="tip-icon">💡</span>
+                            Pro Tip
+                        </div>
+                        <div class="tip-content">
+                            Use the formula 2^n - 2 to calculate usable hosts, where n is the number of host bits.
+                            Subtract 2 to account for network and broadcast addresses.
+                        </div>
+                    </div>
+                </section>
+
+                <section class="doc-section" id="troubleshooting">
+                    <h2>Network Troubleshooting</h2>
+                    
+                    <p>
+                        Effective troubleshooting follows a systematic approach: identify symptoms, isolate the problem,
+                        and implement a solution.
+                    </p>
+
+                    <h3>Essential Commands</h3>
+                    
+                    <div class="command-list">
+                        <div class="command-item">
+                            <div class="command-syntax">
+                                <code>ping [target]</code>
+                            </div>
+                            <div class="command-desc">
+                                Test basic connectivity using ICMP echo requests
+                            </div>
+                            <div class="code-block">
+                                <pre><code>ping -c 4 8.8.8.8
+ping -c 4 google.com</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="command-item">
+                            <div class="command-syntax">
+                                <code>traceroute [target]</code>
+                            </div>
+                            <div class="command-desc">
+                                Display the route packets take to reach a destination
+                            </div>
+                            <div class="code-block">
+                                <pre><code>traceroute google.com
+# or on some systems:
+tracert google.com</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="command-item">
+                            <div class="command-syntax">
+                                <code>netstat</code>
+                            </div>
+                            <div class="command-desc">
+                                Display network connections, routing tables, and statistics
+                            </div>
+                            <div class="code-block">
+                                <pre><code>netstat -tuln  # Show listening ports
+netstat -r     # Show routing table
+ss -tuln       # Modern alternative to netstat</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="command-item">
+                            <div class="command-syntax">
+                                <code>nslookup / dig</code>
+                            </div>
+                            <div class="command-desc">
+                                Query DNS servers for domain name resolution
+                            </div>
+                            <div class="code-block">
+                                <pre><code>nslookup google.com
+dig google.com
+dig @8.8.8.8 google.com  # Use specific DNS server</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Navigation -->
+                <nav class="doc-nav">
+                    <a href="index.html#docs" class="doc-nav-link prev">
+                        <span class="nav-arrow">←</span>
+                        <span class="nav-text">Back to Topics</span>
+                    </a>
+                    <a href="servers.html" class="doc-nav-link next">
+                        <span class="nav-text">Next: Servers</span>
+                        <span class="nav-arrow">→</span>
+                    </a>
+                </nav>
+            </article>
+
+            <!-- Table of Contents (sticky) -->
+            <aside class="toc">
+                <div class="toc-title">On This Page</div>
+                <nav class="toc-nav">
+                    <a href="#overview" class="toc-link active">Overview</a>
+                    <a href="#tcp-ip" class="toc-link">TCP/IP Fundamentals</a>
+                    <a href="#routing" class="toc-link">Routing Protocols</a>
+                    <a href="#vlans" class="toc-link">VLANs & Subnetting</a>
+                    <a href="#troubleshooting" class="toc-link">Troubleshooting</a>
+                </nav>
+            </aside>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="prompt">$</span>
+                        <span class="logo-text">infra.docs</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Building reliable infrastructure, one guide at a time
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Documentation</h4>
+                    <ul class="footer-links">
+                        <li><a href="networking.html">Networking</a></li>
+                        <li><a href="servers.html">Servers</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Infrastructure Documentation. Open source under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="docs.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infrastructure Engineering Documentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Terminal-style header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="prompt">$</span>
+                    <span class="logo-text">infra.docs</span>
+                    <span class="cursor">_</span>
+                </div>
+                <nav class="main-nav">
+                    <a href="#home" class="nav-link active">home</a>
+                    <a href="#docs" class="nav-link">docs</a>
+                    <a href="#guides" class="nav-link">guides</a>
+                    <a href="#about" class="nav-link">about</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="tag-line">
+                        <span class="bracket">[</span>
+                        <span class="tag-text">INFRASTRUCTURE</span>
+                        <span class="bracket">]</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Build. Deploy. <br>
+                        <span class="highlight">Operate.</span>
+                    </h1>
+                    <p class="hero-description">
+                        Comprehensive guides and documentation for modern infrastructure engineering.
+                        From networking fundamentals to advanced security practices.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#docs" class="btn btn-primary">
+                            <span class="btn-icon">→</span>
+                            Browse Documentation
+                        </a>
+                        <a href="#guides" class="btn btn-secondary">
+                            <span class="btn-icon">⚡</span>
+                            Quick Start Guides
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <div class="terminal-title">terminal</div>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt-symbol">$</span>
+                                <span class="command">systemctl status nginx</span>
+                            </div>
+                            <div class="terminal-line output">
+                                <span class="status-active">●</span> nginx.service - NGINX HTTP Server
+                            </div>
+                            <div class="terminal-line output">
+                                &nbsp;&nbsp;&nbsp;Loaded: loaded (/lib/systemd/system/nginx.service)
+                            </div>
+                            <div class="terminal-line output">
+                                &nbsp;&nbsp;&nbsp;Active: <span class="success">active (running)</span>
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt-symbol">$</span>
+                                <span class="command cursor-blink">|</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Grid -->
+    <section class="topics" id="docs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">01</span>
+                    Documentation Topics
+                </h2>
+                <p class="section-description">
+                    Deep dive into infrastructure components, tools, and best practices
+                </p>
+            </div>
+
+            <div class="topics-grid">
+                <a href="networking.html" class="topic-card">
+                    <div class="topic-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="20" r="3" fill="currentColor"/>
+                            <line x1="20" y1="5" x2="20" y2="17" stroke="currentColor" stroke-width="2"/>
+                            <line x1="20" y1="23" x2="20" y2="35" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="topic-title">Networking</h3>
+                    <p class="topic-description">
+                        TCP/IP, routing protocols, VLANs, load balancing, and network architecture patterns
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-count">12 guides</span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="servers.html" class="topic-card">
+                    <div class="topic-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="5" y="8" width="30" height="8" stroke="currentColor" stroke-width="2"/>
+                            <rect x="5" y="18" width="30" height="8" stroke="currentColor" stroke-width="2"/>
+                            <rect x="5" y="28" width="30" height="8" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="10" cy="12" r="1.5" fill="currentColor"/>
+                            <circle cx="10" cy="22" r="1.5" fill="currentColor"/>
+                            <circle cx="10" cy="32" r="1.5" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="topic-title">Servers</h3>
+                    <p class="topic-description">
+                        Linux administration, virtualization, containers, and server hardening techniques
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-count">15 guides</span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="applications.html" class="topic-card">
+                    <div class="topic-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect x="8" y="8" width="24" height="24" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 20L18 24L26 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="topic-title">Applications</h3>
+                    <p class="topic-description">
+                        Deployment strategies, monitoring, logging, CI/CD pipelines, and application scaling
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-count">18 guides</span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="services.html" class="topic-card">
+                    <div class="topic-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="8" r="2" fill="currentColor"/>
+                            <circle cx="20" cy="32" r="2" fill="currentColor"/>
+                            <circle cx="8" cy="20" r="2" fill="currentColor"/>
+                            <circle cx="32" cy="20" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="topic-title">Services</h3>
+                    <p class="topic-description">
+                        DNS, DHCP, HTTPS/TLS, reverse proxies, and critical infrastructure services
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-count">14 guides</span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="security.html" class="topic-card">
+                    <div class="topic-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5L8 10V18C8 26 14 32 20 35C26 32 32 26 32 18V10L20 5Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M20 15V25M15 20H25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="topic-title">Security</h3>
+                    <p class="topic-description">
+                        Firewalls, encryption, authentication, authorization, and security best practices
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-count">20 guides</span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+
+                <a href="automation.html" class="topic-card">
+                    <div class="topic-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="10" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="30" cy="20" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M14 20H26M20 10V30" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="topic-title">Automation</h3>
+                    <p class="topic-description">
+                        Infrastructure as Code, Ansible, Terraform, and automated provisioning workflows
+                    </p>
+                    <div class="topic-meta">
+                        <span class="topic-count">16 guides</span>
+                        <span class="topic-arrow">→</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section class="quick-start" id="guides">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-number">02</span>
+                    Quick Start Guides
+                </h2>
+                <p class="section-description">
+                    Get up and running fast with step-by-step tutorials
+                </p>
+            </div>
+
+            <div class="guides-list">
+                <div class="guide-item">
+                    <div class="guide-header">
+                        <span class="guide-tag">NETWORKING</span>
+                        <span class="guide-time">15 min</span>
+                    </div>
+                    <h3 class="guide-title">Setting up a VPN with WireGuard</h3>
+                    <p class="guide-excerpt">
+                        Configure a secure point-to-point VPN tunnel using modern WireGuard protocol
+                    </p>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-header">
+                        <span class="guide-tag">SERVERS</span>
+                        <span class="guide-time">20 min</span>
+                    </div>
+                    <h3 class="guide-title">Docker Containerization Basics</h3>
+                    <p class="guide-excerpt">
+                        Learn to containerize applications and manage multi-container deployments
+                    </p>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-header">
+                        <span class="guide-tag">SERVICES</span>
+                        <span class="guide-time">10 min</span>
+                    </div>
+                    <h3 class="guide-title">Configuring NGINX as Reverse Proxy</h3>
+                    <p class="guide-excerpt">
+                        Set up NGINX to handle SSL termination and route traffic to backend services
+                    </p>
+                </div>
+
+                <div class="guide-item">
+                    <div class="guide-header">
+                        <span class="guide-tag">SECURITY</span>
+                        <span class="guide-time">25 min</span>
+                    </div>
+                    <h3 class="guide-title">Hardening SSH Access</h3>
+                    <p class="guide-excerpt">
+                        Implement key-based authentication, fail2ban, and security best practices
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="prompt">$</span>
+                        <span class="logo-text">infra.docs</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Building reliable infrastructure, one guide at a time
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Documentation</h4>
+                    <ul class="footer-links">
+                        <li><a href="networking.html">Networking</a></li>
+                        <li><a href="servers.html">Servers</a></li>
+                        <li><a href="applications.html">Applications</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="security.html">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#guides">Quick Start</a></li>
+                        <li><a href="#">Best Practices</a></li>
+                        <li><a href="#">Troubleshooting</a></li>
+                        <li><a href="#">Contribute</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">RSS Feed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Infrastructure Documentation. Open source under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
